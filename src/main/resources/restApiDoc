@@ -1,0 +1,43 @@
+1. 根据名称查询用户列表
+url: GET /user/queryList?name=lisi
+参数:
+返回:
+{
+  "code": "00000",
+  "mesg": "处理成功",
+  "time": "2022-07-03T10:15:34.010Z",
+  "data": [
+    {
+      "id": 1,
+      "userName": "lisi",
+      "email": "2345654@163.com",
+      "password": "123456"
+    }
+  ]
+}
+
+2. 注册用户
+url: POST /user/register
+content-type: application/json
+请求参数样例:
+{
+"userName":"lisi","password":"12345678","email":"3456d1f@163.com", "passwordConfirm":"12345678"
+}
+返回:
+{
+  "code": "00000",
+  "mesg": "处理成功",
+  "time": "2022-07-03T10:17:49.429Z"
+}
+
+3. 删除用户
+url: GET /user/deleteById
+参数: id(用户id)
+返回:
+{
+  "code": "00000",
+  "mesg": "处理成功",
+  "time": "2022-07-03T10:17:49.429Z"
+}
+
+

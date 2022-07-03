@@ -1,0 +1,11 @@
+create table user
+(
+    id          bigint auto_increment
+        primary key,
+    user_name   varchar(32)                         null,
+    password    varchar(64)                         null,
+    email       varchar(64)                         null,
+    create_time timestamp default CURRENT_TIMESTAMP not null,
+    update_time timestamp default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP,
+    is_deleted  int(1)    default 0                 not null
+) charset = utf8;
